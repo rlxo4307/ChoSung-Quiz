@@ -36,7 +36,7 @@ public class Start extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtId;
 	private JPasswordField pf_pw;
-	String Cryptogram; // PW ¾ÏÈ£È­
+	String Cryptogram; // PW ï¿½ï¿½È£È­
 	
 	/**
 	 * Launch the application.
@@ -75,7 +75,7 @@ public class Start extends JFrame {
 	 */
 	public Start(){
 		setResizable(false);
-		System.out.println("¢Æ¢Æ¢Æ¢Æ¢Æ Start ÀÌµ¿ ¿Ï·á ¢Æ¢Æ¢Æ¢Æ¢Æ");
+		System.out.println("ï¿½Æ¢Æ¢Æ¢Æ¢ï¿½ Start ï¿½Ìµï¿½ ï¿½Ï·ï¿½ ï¿½Æ¢Æ¢Æ¢Æ¢ï¿½");
 		Login_DAO l_dao = new Login_DAO();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -127,7 +127,7 @@ public class Start extends JFrame {
 				}
 			}
 		});
-		txtId.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 14));
+		txtId.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½", Font.PLAIN, 14));
 		txtId.setColumns(10);
 		JButton btn_Enter = new JButton("\uC785\uC7A5");
 		sl_cp_left_m.putConstraint(SpringLayout.NORTH, btn_Enter, 260, SpringLayout.NORTH, cp_left_m);
@@ -135,7 +135,7 @@ public class Start extends JFrame {
 		sl_cp_left_m.putConstraint(SpringLayout.SOUTH, btn_Enter, 300, SpringLayout.NORTH, cp_left_m);
 		sl_cp_left_m.putConstraint(SpringLayout.EAST, btn_Enter, 290, SpringLayout.WEST, cp_left_m);
 		cp_left_m.add(btn_Enter);
-		btn_Enter.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 14));
+		btn_Enter.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½", Font.PLAIN, 14));
 		btn_Enter.setBackground(new Color(225,212,0));
 		
 		JButton btn_SignUp = new JButton("\uD68C\uC6D0\uAC00\uC785");
@@ -159,7 +159,7 @@ public class Start extends JFrame {
 				}
 			}
 		});
-		btn_SignUp.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 14));
+		btn_SignUp.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½", Font.PLAIN, 14));
 		btn_SignUp.setBackground(new Color(245, 245, 245));
 		
 		pf_pw = new JPasswordField();
@@ -168,7 +168,7 @@ public class Start extends JFrame {
 		sl_cp_left_m.putConstraint(SpringLayout.SOUTH, pf_pw, 245, SpringLayout.NORTH, cp_left_m);
 		sl_cp_left_m.putConstraint(SpringLayout.EAST, pf_pw, 280, SpringLayout.WEST, cp_left_m);
 		cp_left_m.add(pf_pw);
-		pf_pw.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 26));
+		pf_pw.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 26));
 		pf_pw.setBorder(null);
 		
 		JLabel lbl_id = new JLabel("  ID");
@@ -177,7 +177,7 @@ public class Start extends JFrame {
 		sl_cp_left_m.putConstraint(SpringLayout.SOUTH, lbl_id, 200, SpringLayout.NORTH, cp_left_m);
 		sl_cp_left_m.putConstraint(SpringLayout.EAST, lbl_id, 290, SpringLayout.WEST, cp_left_m);
 		cp_left_m.add(lbl_id);
-		lbl_id.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 14));
+		lbl_id.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 14));
 		lbl_id.setOpaque(true);
 		lbl_id.setBorder(new LineBorder(new Color(169, 169, 169)));
 		lbl_id.setBackground(Color.WHITE);
@@ -189,7 +189,7 @@ public class Start extends JFrame {
 		sl_cp_left_m.putConstraint(SpringLayout.EAST, lbl_pw, 290, SpringLayout.WEST, cp_left_m);
 		cp_left_m.add(lbl_pw);
 		lbl_pw.setOpaque(true);
-		lbl_pw.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 14));
+		lbl_pw.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 14));
 		lbl_pw.setBorder(new LineBorder(new Color(169, 169, 169)));
 		lbl_pw.setBackground(Color.WHITE);
 		
@@ -211,8 +211,8 @@ public class Start extends JFrame {
 		lbl_ui_downbar.setBounds(10, 10, 642, 1);
 		cp_down_m.add(lbl_ui_downbar);
 		
-		JLabel lblNewLabel = new JLabel("Copyright 2022. 2\uC870 \uAD6C\uBCF8\uACBD \uBB38\uADDC\uD658 \uC774\uC778\uD638 \uC804\uD638\uD615 \uD55C\uAE30\uD0DC all right reversed.");
-		lblNewLabel.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 11));
+		JLabel lblNewLabel = new JLabel("Copyright 2022. 2\uC870 \uBB38\uADDC\uD658 \uC774\uC778\uD638 \uC804\uD638\uD615 \uD55C\uAE30\uD0DC all right reversed.");
+		lblNewLabel.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 11));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(10, 19, 642, 17);
 		cp_down_m.add(lblNewLabel);
@@ -221,35 +221,35 @@ public class Start extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				if (e.getSource()==btn_Enter) {		
-					// ¡é ID, PW ÀÔ·Â ¹Þ±â
+					// ï¿½ï¿½ ID, PW ï¿½Ô·ï¿½ ï¿½Þ±ï¿½
 					String id= txtId.getText();
 					String pw = pf_pw.getText();				
 					
-					// PASSWORD ¾ÏÈ£È­ ½ÃÀÛ =========================
+					// PASSWORD ï¿½ï¿½È£È­ ï¿½ï¿½ï¿½ï¿½ =========================
 					try {
 						Cryptogram = sha256.encrypt(pw);
 					} catch (NoSuchAlgorithmException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
-					// PASSWORD ¾ÏÈ£È­ ¿Ï·á =========================
+					// PASSWORD ï¿½ï¿½È£È­ ï¿½Ï·ï¿½ =========================
 					boolean b1 = l_dao.login(id, Cryptogram);
 
-					// ¡é Á¢¼Ó ¿©ºÎ È®ÀÎ
+					// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
 				
 					if(id.equals("") || pw.equals("")) {
-						JOptionPane.showMessageDialog(null, "¾ÆÀÌµð, ÆÐ½º¿öµå¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-						System.out.println("¾ÆÀÌµð, ÆÐ½º¿öµå¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+						JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½Ìµï¿½, ï¿½Ð½ï¿½ï¿½ï¿½ï¿½å¸¦ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+						System.out.println("ï¿½ï¿½ï¿½Ìµï¿½, ï¿½Ð½ï¿½ï¿½ï¿½ï¿½å¸¦ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 						return;
 					}		
 					if(b1) {
 						dispose();
 						setVisible(false);
-						new Topic(vo2 = td.TOtopicNrank(id)).setVisible(true); // Toss_DAO -> VO2 ¹ÝÈ¯
+						new Topic(vo2 = td.TOtopicNrank(id)).setVisible(true); // Toss_DAO -> VO2 ï¿½ï¿½È¯
 					}
 					else {
-						JOptionPane.showMessageDialog(null, "¾ÆÀÌµð, ÆÐ½º¿öµå°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
-						System.out.println("¾ÆÀÌµð, ÆÐ½º¿öµå°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
+						JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½Ìµï¿½, ï¿½Ð½ï¿½ï¿½ï¿½ï¿½å°¡ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
+						System.out.println("ï¿½ï¿½ï¿½Ìµï¿½, ï¿½Ð½ï¿½ï¿½ï¿½ï¿½å°¡ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
 						return;
 					}
 				}

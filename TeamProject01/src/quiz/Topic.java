@@ -296,7 +296,7 @@ public class Topic extends JFrame {
       lbl_ui_downbar.setBounds(10, 10, 642, 1);
       cp_down_m.add(lbl_ui_downbar);
       
-      JLabel lblNewLabel = new JLabel("Copyright 2022. 2\uC870 \uAD6C\uBCF8\uACBD \uBB38\uADDC\uD658 \uC774\uC778\uD638 \uC804\uD638\uD615 \uD55C\uAE30\uD0DC all right reversed.");
+      JLabel lblNewLabel = new JLabel("Copyright 2022. 2\uC870 \uBB38\uADDC\uD658 \uC774\uC778\uD638 \uC804\uD638\uD615 \uD55C\uAE30\uD0DC all right reversed.");
       lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
       lblNewLabel.setFont(new Font("���� ��� Semilight", Font.PLAIN, 11));
       lblNewLabel.setBounds(10, 19, 642, 17);

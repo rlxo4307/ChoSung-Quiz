@@ -62,7 +62,7 @@ public class SignUp extends JFrame {
 	 */
 	public SignUp() throws ClassNotFoundException, SQLException {
 		setResizable(false);
-		System.out.println("¢Æ¢Æ¢Æ¢Æ¢Æ SignUp ÀÌµ¿ ¿Ï·á ¢Æ¢Æ¢Æ¢Æ¢Æ");
+		System.out.println("ï¿½Æ¢Æ¢Æ¢Æ¢ï¿½ SignUp ï¿½Ìµï¿½ ï¿½Ï·ï¿½ ï¿½Æ¢Æ¢Æ¢Æ¢ï¿½");
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1024, 600);
@@ -87,13 +87,13 @@ public class SignUp extends JFrame {
 		pf_pw = new JPasswordField();
 		pf_pw.setBounds(95, 215, 185, 30);
 		cp_left_m.add(pf_pw);
-		pf_pw.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 26));
+		pf_pw.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 26));
 		pf_pw.setBorder(null);
 		
 		pf_pwre = new JPasswordField();
 		pf_pwre.setBounds(95, 265, 185, 30);
 		cp_left_m.add(pf_pwre);
-		pf_pwre.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 26));
+		pf_pwre.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 26));
 		pf_pwre.setBorder(null);
 		
 		txtId = new JTextField();
@@ -121,7 +121,7 @@ public class SignUp extends JFrame {
 				}
 			}
 		});
-		txtId.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 12));
+		txtId.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½", Font.PLAIN, 12));
 		txtId.setColumns(10);
 		JButton btnSignUp = new JButton("\uC644\uB8CC");
 		btnSignUp.setBounds(170, 310, 120, 40);
@@ -133,7 +133,7 @@ public class SignUp extends JFrame {
 
 				int b2 = 0;
 				
-				// ¡é ID, PW, PW_RE(µ¿ÀÏ °ªÃ¼Å©) ÀÔ·Â ¹Þ±â
+				// ï¿½ï¿½ ID, PW, PW_RE(ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼Å©) ï¿½Ô·ï¿½ ï¿½Þ±ï¿½
 				
 				String id= txtId.getText();
 				String pw = pf_pw.getText();		
@@ -147,39 +147,39 @@ public class SignUp extends JFrame {
 				}
 					System.out.println(Cryptogram);
 				
-				// ¡é ¾ÏÈ£ ÀÔ·Â°ª µ¿ÀÏ ¿©ºÎ Ã¼Å©
+				// ï¿½ï¿½ ï¿½ï¿½È£ ï¿½Ô·Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¼Å©
 				if(pw.equals(pw_re)) {
 					b2 = na_dao.new_account(id, Cryptogram);
 				}else {
-					JOptionPane.showMessageDialog(null, "ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
-					System.out.println("ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
+					JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
+					System.out.println("ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
 					return;
 				}
 
-				// ¡é °èÁ¤ »ý¼º ¿©ºÎ È®ÀÎ					
+				// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½					
 				if(b2==0) {
-					JOptionPane.showMessageDialog(null, "ID°¡ »ý¼ºµÇ¾ú½À´Ï´Ù.");
-					System.out.println("°èÁ¤ »ý¼º ¼º°ø");
+					JOptionPane.showMessageDialog(null, "IDï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 					dispose();
 					setVisible(false);
 						new Start().setVisible(true);
 				} else if (b2==1){
-					JOptionPane.showMessageDialog(null, "¿¡·¯ ¹ß»ý °èÁ¤ »ý¼º ½ÇÆÐ");
-					System.out.println("¿¡·¯ ¹ß»ý °èÁ¤ »ý¼º ½ÇÆÐ");
+					JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 				} else {
-					JOptionPane.showMessageDialog(null, "»ç¿ë ºÒ°¡ÇÑ ID ÀÔ´Ï´Ù.");
-					System.out.println("»ç¿ë ºÒ°¡ÇÑ ID ÀÔ´Ï´Ù.");
+					JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½ ID ï¿½Ô´Ï´ï¿½.");
+					System.out.println("ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½ ID ï¿½Ô´Ï´ï¿½.");
 				}
 			}
 		});
-		btnSignUp.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 14));
+		btnSignUp.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½", Font.PLAIN, 14));
 		btnSignUp.setBackground(new Color(225, 212, 0));
 		
 		lbl_id = new JLabel("  ID");
 		lbl_id.setBounds(40, 160, 250, 40);
 		cp_left_m.add(lbl_id);
 		lbl_id.setOpaque(true);
-		lbl_id.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 14));
+		lbl_id.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 14));
 		lbl_id.setBorder(new LineBorder(new Color(169, 169, 169)));
 		lbl_id.setBackground(Color.WHITE);
 		
@@ -187,7 +187,7 @@ public class SignUp extends JFrame {
 		lbl_pw.setBounds(40, 260, 250, 40);
 		cp_left_m.add(lbl_pw);
 		lbl_pw.setOpaque(true);
-		lbl_pw.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 14));
+		lbl_pw.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 14));
 		lbl_pw.setBorder(new LineBorder(new Color(169, 169, 169)));
 		lbl_pw.setBackground(Color.WHITE);
 		
@@ -195,7 +195,7 @@ public class SignUp extends JFrame {
 		lbl_pw_1.setBounds(40, 210, 250, 40);
 		cp_left_m.add(lbl_pw_1);
 		lbl_pw_1.setOpaque(true);
-		lbl_pw_1.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 14));
+		lbl_pw_1.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 14));
 		lbl_pw_1.setBorder(new LineBorder(new Color(169, 169, 169)));
 		lbl_pw_1.setBackground(Color.WHITE);
 		
@@ -209,7 +209,7 @@ public class SignUp extends JFrame {
 				}
 			}
 		});
-		btnBack.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 14));
+		btnBack.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½", Font.PLAIN, 14));
 		btnBack.setBackground(new Color(245, 245, 245));
 		btnBack.setBounds(40, 310, 120, 40);
 		cp_left_m.add(btnBack);
@@ -231,9 +231,9 @@ public class SignUp extends JFrame {
 		lbl_ui_downbar.setBounds(10, 10, 642, 1);
 		cp_down_m.add(lbl_ui_downbar);
 		
-		lblNewLabel = new JLabel("Copyright 2022. 2\uC870 \uAD6C\uBCF8\uACBD \uBB38\uADDC\uD658 \uC774\uC778\uD638 \uC804\uD638\uD615 \uD55C\uAE30\uD0DC all right reversed.");
+		lblNewLabel = new JLabel("Copyright 2022. 2\uC870 \uBB38\uADDC\uD658 \uC774\uC778\uD638 \uC804\uD638\uD615 \uD55C\uAE30\uD0DC all right reversed.");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 11));
+		lblNewLabel.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 11));
 		lblNewLabel.setBounds(10, 19, 642, 17);
 		cp_down_m.add(lblNewLabel);
 	}

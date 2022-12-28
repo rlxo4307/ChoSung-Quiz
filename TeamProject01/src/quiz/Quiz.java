@@ -41,7 +41,7 @@ public class Quiz extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtInput;
 	
-	String stop="°ÔÀÓÁ¾·á:YES / ÀçµµÀü:NO";
+	String stop="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:YES / ï¿½çµµï¿½ï¿½:NO";
 	
 	static String id;
 	static int q_type;
@@ -70,7 +70,7 @@ public class Quiz extends JFrame {
 	public Quiz(VO2 vo2) throws ClassNotFoundException, SQLException {
 		setResizable(false);
 
-		System.out.println("¢Æ¢Æ¢Æ¢Æ¢Æ Quiz ÀÌµ¿ ¿Ï·á ¢Æ¢Æ¢Æ¢Æ¢Æ");
+		System.out.println("ï¿½Æ¢Æ¢Æ¢Æ¢ï¿½ Quiz ï¿½Ìµï¿½ ï¿½Ï·ï¿½ ï¿½Æ¢Æ¢Æ¢Æ¢ï¿½");
 		vo3 = vo2;
 		vo3.setQnum(vo3.getQ()[vo3.getSido()-1]);
 		
@@ -84,21 +84,21 @@ public class Quiz extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		// HH ÀÛ¾÷ start ==============================
+		// HH ï¿½Û¾ï¿½ start ==============================
 
-		JLabel lblQuiz = new JLabel(" ¹®Á¦ ÁØºñÁß ");
+		JLabel lblQuiz = new JLabel(" ï¿½ï¿½ï¿½ï¿½ ï¿½Øºï¿½ï¿½ï¿½ ");
 		lblQuiz.setHorizontalAlignment(SwingConstants.CENTER);
-		lblQuiz.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 50));
+		lblQuiz.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 50));
 		lblQuiz.setBounds(419, 199, 500, 185);
 		contentPane.add(lblQuiz);
 		Game que = new Game();
-		String question = que.question(vo3.getQ_type(), vo3.getQnum()); // ¹®Á¦ °¡Á®¿À±â
+		String question = que.question(vo3.getQ_type(), vo3.getQnum()); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		lblQuiz.setText(question);
 		
 		txtInput = new JTextField();
 		txtInput.setBorder(new LineBorder(new Color(171, 173, 179)));
 		txtInput.setHorizontalAlignment(SwingConstants.CENTER);
-		txtInput.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		txtInput.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		txtInput.addMouseListener(new MouseAdapter() {
 			int sw = 0; 
 			@Override
@@ -145,7 +145,7 @@ public class Quiz extends JFrame {
 				}
 			}
 		});
-		btnGiveUp.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 15));
+		btnGiveUp.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 15));
 		btnGiveUp.setBounds(419, 443, 245, 40);
 		contentPane.add(btnGiveUp);
 		
@@ -153,11 +153,11 @@ public class Quiz extends JFrame {
 		lblTime.setForeground(UIManager.getColor("Button.foreground"));
 		
 		lblTime.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTime.setFont(new Font("¸¼Àº °íµñ Semilight", Font.BOLD, 50));
+		lblTime.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.BOLD, 50));
 		lblTime.setBounds(419, 132, 500, 57);
 		contentPane.add(lblTime);
 		
-        final Runnable runnable = new Runnable() {// Ä«¿îÆ®´Ù¿î
+        final Runnable runnable = new Runnable() {// Ä«ï¿½ï¿½Æ®ï¿½Ù¿ï¿½
             public void run() { 
             	vo3.setSavetime(Topic.countdownStarter);
             	if(vo3.getSavetime() <= 30)
@@ -165,17 +165,17 @@ public class Quiz extends JFrame {
         		if(vo3.getSavetime() <= 10)
             		lblTime.setForeground(new Color(220,20,60));
         		
-            	lblTime.setText(String.valueOf(vo3.getSavetime())); // time ¶óº§¿¡ Ãâ·Â
+            	lblTime.setText(String.valueOf(vo3.getSavetime())); // time ï¿½óº§¿ï¿½ ï¿½ï¿½ï¿½
                 Topic.countdownStarter--;
                 
                 if (vo3.getSavetime() == 0) {
-                    System.out.println("Timer Over!"); // Á¾·á½Ã task ÁöÁ¤
+                    System.out.println("Timer Over!"); // ï¿½ï¿½ï¿½ï¿½ï¿½ task ï¿½ï¿½ï¿½ï¿½
                     scheduler.shutdown();
                     
                     Game.update(vo3.getId(), vo3.getNowscore());
     						
     				int result=JOptionPane.showConfirmDialog
-    						(btnGiveUp, stop, "°ÔÀÓÀÌ ³¡³µ½À´Ï´Ù", JOptionPane.YES_NO_OPTION);
+    						(btnGiveUp, stop, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½", JOptionPane.YES_NO_OPTION);
 
     				if(result==JOptionPane.YES_OPTION) {
     					dispose();
@@ -202,38 +202,38 @@ public class Quiz extends JFrame {
 		
 		JButton btnChecking = new JButton("\uC815\uB2F5 \uC81C\uCD9C");	
 		btnChecking.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Á¤´äÁ¦Ãâ		
+			public void actionPerformed(ActionEvent e) { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½		
 				if(vo3.getSido()>0) {
 					if(e.getSource() == btnChecking) { 
 						vo3.setDap(txtInput.getText());
 						vo3.setSido(vo3.getSido()-1); 
-						if(Game.check(vo3.getDap(), vo3.getQnum(), vo3.getQ_type())) { // Á¤´äÀÌ ¸Â´Ù¸é
-							vo3.setNowscore(vo3.getNowscore()+10); // ÇöÀç Á¡¼ö Áõ°¡
-							td.qcountup(vo3.getId()); // ´©Àû Á¤´ä ¼ö Áõ°¡
+						if(Game.check(vo3.getDap(), vo3.getQnum(), vo3.getQ_type())) { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Â´Ù¸ï¿½
+							vo3.setNowscore(vo3.getNowscore()+10); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+							td.qcountup(vo3.getId()); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 							dispose();
 							setVisible(false);
 							scheduler.shutdown();
-							Game.update(vo3.getId(), vo3.getNowscore()); // Á¡¼ö°¡ ³ôÀ¸¸é °»½Å			
+							Game.update(vo3.getId(), vo3.getNowscore()); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½			
 							new CorrectAnswer(vo3 = td.TOcorrectAnswer(vo3.getId(), vo3.getQ_type(), vo3.getQnum(), vo3.getDap(), vo3.getSido(), vo3.getSavetime(), vo3.getScore(),vo3.getQ(), vo3.getNowscore())).setVisible(true);
-						}else { // Á¤´äÀÌ ¾Æ´Ï¶ó¸é
+						}else { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ï¿½
 		                     dispose();
 		                     setVisible(false);
 		                     scheduler.shutdown();
-		                     Game.update(vo3.getId(), vo3.getNowscore());  // Á¡¼ö°¡ ³ôÀ¸¸é °»½Å
+		                     Game.update(vo3.getId(), vo3.getNowscore());  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		                     new CorrectAnswer(vo3 = td.TOcorrectAnswer(vo3.getId(), vo3.getQ_type(), vo3.getQnum(), vo3.getDap(), vo3.getSido(), vo3.getSavetime(), vo3.getScore(), vo3.getQ(), vo3.getNowscore())).setVisible(true);
 		                  }
 					}
 				}
 			}
 		});
-		btnChecking.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 15));
+		btnChecking.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 15));
 		btnChecking.setBackground(new Color(225, 212, 0));
 		btnChecking.setBounds(674, 443, 245, 40);
 		contentPane.add(btnChecking);
 		
 		JLabel lblLeanTime = new JLabel("\uB0A8\uC740 \uC2DC\uAC04");
 		lblLeanTime.setHorizontalAlignment(SwingConstants.CENTER);
-		lblLeanTime.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lblLeanTime.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lblLeanTime.setBounds(419, 107, 500, 15);
 		contentPane.add(lblLeanTime);
 
@@ -243,13 +243,13 @@ public class Quiz extends JFrame {
 		contentPane.add(cp_left_m);
 		
 		JLabel lbl_user = new JLabel((String) null);
-		lbl_user.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_user.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lbl_user.setBounds(164, 160, 110, 15);
 		lbl_user.setText(vo3.getId());
 		cp_left_m.add(lbl_user);
 		
 		JLabel lbl_maxscore = new JLabel("0");
-		lbl_maxscore.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_maxscore.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lbl_maxscore.setBounds(164, 215, 110, 15);
 		lbl_maxscore.setText(String.valueOf(vo3.getScore()));
 		cp_left_m.add(lbl_maxscore);
@@ -275,51 +275,51 @@ public class Quiz extends JFrame {
 		   		}
 		  	}
 		  });
-		icon_logout.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		icon_logout.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		icon_logout.setToolTipText("\uB85C\uADF8\uC544\uC6C3");
 		icon_logout.setBounds(120, 495, 24, 24);
 		cp_left_m.add(icon_logout);
 	    icon_logout.setIcon(new ImageIcon(CorrectAnswer.class.getResource("/picture/logout.png")));
 		
 		JLabel lbl_ui_id = new JLabel("\uC544\uC774\uB514");
-		lbl_ui_id.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_ui_id.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lbl_ui_id.setBounds(74, 160, 80, 15);
 		cp_left_m.add(lbl_ui_id);
 		
 		JLabel lbl_ui_maxscore = new JLabel("\uCD5C\uACE0 \uC810\uC218");
-		lbl_ui_maxscore.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_ui_maxscore.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lbl_ui_maxscore.setBounds(74, 215, 80, 15);
 		cp_left_m.add(lbl_ui_maxscore);
 		
 		JLabel lbl_ui_dap_all = new JLabel("\uB204\uC801 \uC815\uB2F5 \uC218");
-		lbl_ui_dap_all.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_ui_dap_all.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lbl_ui_dap_all.setBounds(74, 240, 80, 15);
 		cp_left_m.add(lbl_ui_dap_all);
 		
 		JLabel lbl_dapall = new JLabel("");
-		lbl_dapall.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_dapall.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lbl_dapall.setBounds(164, 240, 110, 15);
 		lbl_dapall.setText(Integer.toString(vo3.getDap_all()));
 		cp_left_m.add(lbl_dapall);
 		
 		JLabel lbl_ui_vcount = new JLabel("\uBC29\uBB38 \uD69F\uC218");
-		lbl_ui_vcount.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_ui_vcount.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lbl_ui_vcount.setBounds(74, 401, 80, 15);
 		cp_left_m.add(lbl_ui_vcount);
 		
 		JLabel lbl_ui_fdate = new JLabel("\uAC00\uC785\uC77C");
-		lbl_ui_fdate.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_ui_fdate.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lbl_ui_fdate.setBounds(74, 426, 80, 15);
 		cp_left_m.add(lbl_ui_fdate);
 		
 		JLabel lbl_fdate = new JLabel("null");
-		lbl_fdate.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_fdate.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lbl_fdate.setBounds(164, 426, 110, 15);
 		lbl_fdate.setText(String.valueOf(vo3.getFdate()));
 		cp_left_m.add(lbl_fdate);
 		
 		JLabel lbl_vcount = new JLabel("0");
-		lbl_vcount.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_vcount.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lbl_vcount.setBounds(164, 401, 110, 15);
 	    lbl_vcount.setText(String.valueOf(vo3.getV_count()));
 		cp_left_m.add(lbl_vcount);
@@ -331,7 +331,7 @@ public class Quiz extends JFrame {
 		cp_left_m.add(lbl_ui_leftbar_1_1);
 		
 		JLabel lbl_ui_id_1 = new JLabel("\uB85C\uADF8\uC544\uC6C3");
-		lbl_ui_id_1.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_ui_id_1.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lbl_ui_id_1.setBounds(150, 500, 80, 15);
 		cp_left_m.add(lbl_ui_id_1);
 		
@@ -342,7 +342,7 @@ public class Quiz extends JFrame {
 		
 		JLabel lbl_logout = new JLabel("");
 		lbl_logout.setOpaque(true);
-		lbl_logout.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 14));
+		lbl_logout.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 14));
 		lbl_logout.setBorder(new LineBorder(new Color(169, 169, 169)));
 		lbl_logout.setBackground(Color.WHITE);
 		lbl_logout.setBounds(40, 487, 250, 40);
@@ -371,37 +371,37 @@ public class Quiz extends JFrame {
 		JLabel lbl_ui_nowscore = new JLabel("\uD604\uC7AC \uC810\uC218");
 		lbl_ui_nowscore.setBounds(74, 294, 80, 15);
 		cp_left_m.add(lbl_ui_nowscore);
-		lbl_ui_nowscore.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_ui_nowscore.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		
 		JLabel lbl_ui_chance = new JLabel("\uD604\uC7AC \uB0A8\uC740 \uAE30\uD68C");
 		lbl_ui_chance.setBounds(74, 319, 80, 15);
 		cp_left_m.add(lbl_ui_chance);
-		lbl_ui_chance.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_ui_chance.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		
 
 		
 		JLabel lbl_dapnow = new JLabel(String.valueOf(vo3.getNowscore()/10));
 		lbl_dapnow.setBounds(164, 344, 110, 15);
 		cp_left_m.add(lbl_dapnow);
-		lbl_dapnow.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_dapnow.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		
 		JLabel lbl_chance = new JLabel(String.valueOf(vo3.getSido()));
 		lbl_chance.setBounds(164, 319, 110, 15);
 		cp_left_m.add(lbl_chance);
-		lbl_chance.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_chance.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		
 		JLabel lbl_nowscore = new JLabel(String.valueOf(vo3.getNowscore()));
 		lbl_nowscore.setBounds(164, 294, 110, 15);
 		cp_left_m.add(lbl_nowscore);
-		lbl_nowscore.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_nowscore.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		
 		JLabel lbl_ui_dapnow = new JLabel("\uD604\uC7AC \uC815\uB2F5 \uC218");
 		lbl_ui_dapnow.setBounds(74, 344, 80, 15);
 		cp_left_m.add(lbl_ui_dapnow);
-		lbl_ui_dapnow.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lbl_ui_dapnow.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		
 		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 12));
+		lblNewLabel_3.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 12));
 		lblNewLabel_3.setBackground(Color.WHITE);
 		lblNewLabel_3.setOpaque(true);
 		lblNewLabel_3.setBounds(0, 272, 330, 109);
@@ -419,9 +419,9 @@ public class Quiz extends JFrame {
 		lbl_ui_downbar.setBounds(10, 10, 642, 1);
 		cp_down_m.add(lbl_ui_downbar);
 		
-		JLabel lblNewLabel = new JLabel("Copyright 2022. 2\uC870 \uAD6C\uBCF8\uACBD \uBB38\uADDC\uD658 \uC774\uC778\uD638 \uC804\uD638\uD615 \uD55C\uAE30\uD0DC all right reversed.");
+		JLabel lblNewLabel = new JLabel("Copyright 2022. 2\uC870 \uBB38\uADDC\uD658 \uC774\uC778\uD638 \uC804\uD638\uD615 \uD55C\uAE30\uD0DC all right reversed.");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("¸¼Àº °íµñ Semilight", Font.PLAIN, 11));
+		lblNewLabel.setFont(new Font("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Semilight", Font.PLAIN, 11));
 		lblNewLabel.setBounds(10, 19, 642, 17);
 		cp_down_m.add(lblNewLabel);
 			
